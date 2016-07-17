@@ -1,0 +1,88 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/parking_lot_background"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:minHeight="50dp"
+        android:minWidth="50dp"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        tools:context="kdjonev.parkmepal.MapsActivity" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Time Left (hh:mm:ss): 00:00:00"
+            android:id="@+id/timeLeft"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reParkButton"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/car_for_button_re_park"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setTimerButton"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/car_for_button_set_timer"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:paddingTop="10dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/takeMeButton"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:background="#ffffff"
+        android:onClick="onClick"
+        android:src="@drawable/car_for_button_take_me"
+        android:paddingTop="10dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_gravity="bottom|center">
+    </com.google.android.gms.ads.AdView>
+
+</LinearLayout>

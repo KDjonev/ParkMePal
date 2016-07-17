@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ParkMePal</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_home_screen">ca-app-pub-6968255150289159/3884991822</string>
+    <string name="ad_timer_screen">ca-app-pub-6968255150289159/7300959829</string>
+    <string name="ad_take_me_screen">ca-app-pub-6968255150289159/9835623822</string>
+    <string name="title_activity_take_me_my_way">Map</string>
+
+</resources>
